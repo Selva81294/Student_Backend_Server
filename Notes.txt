@@ -1,0 +1,50 @@
+Day 39
+1. process.argv
+2. read,write,update,delete using 
+const fs = require("fs")
+read=> fs.readFile
+write=> fs.writeFile
+update=> fs.appendFile
+delete => fs.unlink
+to find directory list => fs.readdir
+3. date,time
+
+
+Day 40
+4. Express JS
+//get methods
+* get data using app.get both (req.send and req.sendfile)
+* req.params
+* req.query
+//put methods
+
+//If mongosh not started in cmd prompt; do follow below steps;
+If you have already installed MongoDB database in your system then you have to check that your DB is in start position or not with the help of following steps:
+press CTRL + Shift + Esc
+go to the service tab and search for Mongo
+check the status - it may be stopped. So click on the Services tab at the bottom right corner and again search for MongoDB
+Click on it and start the DB by right click or in left panel.
+
+
+
+Connection to MongoDB(local & atlas)
+
+dotenv installation to prevent Mongo_url
+
+
+in package.json
+"type":"module"
+require keyword will not work
+import and export keyword should be used
+
+in package.json
+"type":"commonJs"
+require keyword will  work
+import and export will not work
+
+
+
+for avoid cors error while connecting front and back end
+install (npm i cors)
+
+to deploy, use vercel.json setup
