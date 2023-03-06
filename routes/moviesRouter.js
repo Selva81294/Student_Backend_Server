@@ -1,10 +1,15 @@
 import express from "express";
 import { deleteMovies, getMoviesbyParams, getMoviesbyQuery, postMoviesMany, postMoviesOne, putMovies } from "../controllers/movieControllers.js";
 const router = express.Router();
+import jwt from 'jsonwebtoken'
   
 //GET using query
 router.get('/', async (req, res) => {
     try {
+      const token = req.headers["x-auth-token"]
+      const decode = jwt.verify(token,process.env.SECERT_KEY)
+      console.log(decode)
+      
       const movies = await getMoviesbyQuery(req)
       if(movies.length===0) return res.status(404).send("No Content")
       res.status(200).send(movies)

@@ -253,10 +253,11 @@ app.delete('/students/:id',(req,res)=>{
 // ------------------------------------------------------------------------------------
 
 //Connection to MongoDB with NodeJS(local & atlas)
-import express from 'express';
+import express from "express"
 import dotenv from 'dotenv'
 import { studentsRouter } from './routes/moviesRouter.js';
 import cors from 'cors'
+import { userRouter } from './routes/users.js';
 
 //env configuration
 dotenv.config()
@@ -271,6 +272,7 @@ app.use(express.json())
 app.use(cors())
 // app.use('/movies', movieRouter)
 app.use('/students', studentsRouter)
+app.use('/users',userRouter)
 
 const PORT = process.env.PORT
 app.listen(PORT,()=>console.log(`server started localhost:${PORT}`))

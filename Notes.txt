@@ -48,3 +48,6 @@ for avoid cors error while connecting front and back end
 install (npm i cors)
 
 to deploy, use vercel.json setup
+
+for authentication, install bcrypt
+for authorization, install JWT
